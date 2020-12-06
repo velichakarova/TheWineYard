@@ -1,0 +1,27 @@
+<header>
+    <article class="header">The Wine Yard</article>
+    <nav class="nav-header">
+        <ul>
+            <li>
+                <a routerLink=''>Home</a>
+            </li>
+            <li >
+                <a routerLink=''>Wine</a></li>
+            <li *ngIf="isLoggedIn">
+                <a routerLink=''>Cart</a>
+            </li>
+            <li *ngIf="isLoggedIn">
+                <div></div>
+                <a >Hello, [username]@locoldomain.com</a>
+        </li> 
+                <li *ngIf="isLoggedIn">
+                    <div>Hello, [username]@locoldomain.com</div>
+                    <a (click)="logoutHandler()">Logout</a>
+            </li>    
+            <li *ngIf="!isLoggedIn">
+                <a routerLink='/user/login'>Login/Register</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
